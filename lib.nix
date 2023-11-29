@@ -1,5 +1,5 @@
 let
-  genforAllSystems = nixpkgs: systems: function:
+  genForAllSystems = nixpkgs: systems: function:
     nixpkgs.lib.genAttrs
       systems
       (system: function nixpkgs.legacyPackages.${system});
@@ -17,9 +17,10 @@ let
     testing = [ criterion gcovr ];
   };
 
-in {
+in
+{
   inherit
-    genforAllSystems
+    genForAllSystems
     ShellPkgs
-  ;
+    ;
 }
