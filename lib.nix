@@ -17,7 +17,7 @@ let
     testing = [ criterion gcovr ];
   };
 
-  BuildEpitechCBinary = pkgs: info: pkgs.stdenv.mkDerivation {
+  BuildEpitechCBinary = pkgs: info: pkgs.stdenv.mkDerivation ({
     makeFlags = [ "CC=${pkgs.gcc13}/bin/gcc" ];
     hardeningDisable = [ "format" "fortify" ];
 
@@ -37,7 +37,7 @@ let
 
       runHook postInstall
     '';
-  } // info;
+  } // info);
 
 in
 {
