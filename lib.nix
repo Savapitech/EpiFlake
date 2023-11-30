@@ -24,7 +24,7 @@ let
     buildPhase = ''
       runHook preBuild
 
-      ${pkgs.gnumake} ${info.name}
+      ${pkgs.gnumake}/bin/make ${info.name}
 
       runHook postBuild
     '';
