@@ -15,6 +15,7 @@ let
 
     debug = [ valgrind ltrace ];
     testing = [ criterion gcovr ];
+    perf = [ kcachegrind graphviz ];
   };
 
   BuildEpitechCBinary = pkgs: info: pkgs.stdenv.mkDerivation ({
