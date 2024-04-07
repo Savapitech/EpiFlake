@@ -11,6 +11,7 @@ let
       glibc
       binutils
       python310Packages.compiledb
+      csfml
     ];
 
     debug = [ valgrind ltrace ];
