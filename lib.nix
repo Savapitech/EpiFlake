@@ -12,6 +12,8 @@ let
       binutils
       python310Packages.compiledb
       csfml
+      tree-sitter
+      nodejs_21
     ];
 
     debug = [ valgrind ltrace ];
